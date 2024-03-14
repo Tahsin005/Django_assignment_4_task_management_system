@@ -12,11 +12,12 @@
     <title>Task Management System</title>
   </head>
   <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light"
+    <div class="container">
+        <nav
+      class="navbar navbar-expand-lg navbar-light bg-light mt-3"
       style="background-color: #e3f2fd"
     >
-      <a class="navbar-brand" href="/">Task Management</a>
+      <a class="navbar-brand btn btn-warning" href="/">Task Management</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -26,23 +27,23 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" style="gap: 20px;">
           <li class="nav-item">
-            <a class="nav-link" href="#">Add Task</a>
+            <a class="nav-link text-black btn btn-info" href="{% url 'add_task' %}"><strong>Add Task</strong></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Add Category</a>
+            <a class="nav-link text-black btn btn-info" href="{% url 'add_category' %}"><strong>Add Category</strong></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Show Tasks</a>
+          <li class="nav-item ">
+            <a class="nav-link text-black btn btn-info" href="{% url 'task_list' %}"><strong>Show Tasks</strong></a>
           </li>
         </ul>
       </div>
     </nav>
+    </div>
 
     {% block content %}{% endblock content %}
 
